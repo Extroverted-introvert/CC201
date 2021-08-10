@@ -1,8 +1,8 @@
 FROM node:9.4.0-alpine
-COPY app.js .
+COPY app_config.js .
 COPY package.json .
 RUN npm install &&\
     apk update &&\
     apk upgrade
 EXPOSE  8080
-CMD node app.js
+CMD node app_config.js
